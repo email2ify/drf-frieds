@@ -20,5 +20,5 @@ from .views import root_route
 urlpatterns = [
     path('', root_route),
     path('admin/', admin.site.urls),
-    path('', include('friends12.urls')),
+    path('', include('profiles.urls')),
 ]

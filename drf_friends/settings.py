@@ -54,7 +54,8 @@ INSTALLED_APPS = [
     'cloudinary',
     'rest_framework',
     
-    'friends12',
+
+    'profiles',
     
     
 ]
