@@ -7,11 +7,16 @@ from .serializers import PostSerializer
 from drf_friends.permissions import IsOwnerOrReadOnly
 
 
+""" Class on post list for api view"""
+
+
 class PostList(APIView):
     serializer_class = PostSerializer
     permission_classes = [
         permissions.IsAuthenticatedOrReadOnly
     ]
+
+    """calling the functions of Get and Post object all"""
 
     def get(self, request):
         posts = Post.objects.all()
@@ -33,6 +38,7 @@ class PostList(APIView):
             serializer.errors, status=status.HTTP_400_BAD_REQUEST
         )
 
+
 """
     
 class PostDetail(generics.RetrieveUpdateDestroyAPIView):
@@ -46,11 +52,17 @@ class PostDetail(generics.RetrieveUpdateDestroyAPIView):
         comments_count=Count('comment', distinct=True)
     ).order_by('-created_at')
 
-"""   
+"""
+
+""" Class on post detail for api view"""
+
 
 class PostDetail(APIView):
     permission_classes = [IsOwnerOrReadOnly]
     serializer_class = PostSerializer
+
+    """calling the functions and crud functionality Get,
+       Put and delete object all for user's owner"""
 
     def get_object(self, pk):
         try:
