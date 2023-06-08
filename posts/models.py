@@ -29,7 +29,7 @@ class Post(models.Model):
         ('gh', 'Ghana'),
         ('gu', 'Guinea'),
         ('gui', 'Guinea-Bissau'),
-        ('Ug', 'Kenya'),
+        ('ke', 'Kenya'),
         ('li', 'Liberia'),
         ('lib', 'Libya'),
         ('ma', 'Madagascar'),
