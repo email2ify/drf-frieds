@@ -1,3 +1,35 @@
+from rest_framework import generics, permissions
+from drf_friends.permissions import IsOwnerOrReadOnly
+from .models import Post
+from .serializers import PostSerializer
+
+
+class PostList(generics.ListCreateAPIView):
+    
+    
+    """create a post if logged in with the logged in user."""
+    
+    serializer_class = PostSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    queryset = Post.objects.all()
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
+
+
+class PostDetail(generics.RetrieveUpdateDestroyAPIView):
+    
+    """crud functionality for post user owner."""
+ 
+    serializer_class = PostSerializer
+    permission_classes = [IsOwnerOrReadOnly]
+    queryset = Post.objects.all()
+
+
+
+
+"""
+
 from django.http import Http404
 from rest_framework import status, permissions
 from rest_framework.response import Response
@@ -7,8 +39,6 @@ from .serializers import PostSerializer
 from drf_friends.permissions import IsOwnerOrReadOnly
 
 
-""" Class on post list for api view"""
-
 
 class PostList(APIView):
     serializer_class = PostSerializer
@@ -16,7 +46,7 @@ class PostList(APIView):
         permissions.IsAuthenticatedOrReadOnly
     ]
 
-    """calling the functions of Get and Post object all"""
+    
 
     def get(self, request):
         posts = Post.objects.all()
@@ -39,30 +69,13 @@ class PostList(APIView):
         )
 
 
-"""
-    
-class PostDetail(generics.RetrieveUpdateDestroyAPIView):
-    
-   // Retrieve a postDail and edit or delete it if you own it.
-    
-    serializer_class = PostSerializer
-    permission_classes = [IsOwnerOrReadOnly]
-    queryset = Post.objects.annotate(
-        likes_count=Count('likes', distinct=True),
-        comments_count=Count('comment', distinct=True)
-    ).order_by('-created_at')
-
-"""
-
-""" Class on post detail for api view"""
 
 
 class PostDetail(APIView):
     permission_classes = [IsOwnerOrReadOnly]
     serializer_class = PostSerializer
 
-    """calling the functions and crud functionality Get,
-       Put and delete object all for user's owner"""
+
 
     def get_object(self, pk):
         try:
@@ -97,3 +110,5 @@ class PostDetail(APIView):
         return Response(
             status=status.HTTP_204_NO_CONTENT
         )
+
+"""

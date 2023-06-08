@@ -1,3 +1,32 @@
+
+
+
+from rest_framework import generics
+from drf_friends.permissions import IsOwnerOrReadOnly
+from .models import Profile
+from .serializers import ProfileSerializer
+
+
+class ProfileList(generics.ListAPIView):
+    
+    """create view as profile and creation is handled by django signals."""
+
+    queryset = Profile.objects.all()
+    serializer_class = ProfileSerializer
+
+
+class ProfileDetail(generics.RetrieveUpdateAPIView):
+   
+    """crud functionality for profile if user is owner."""
+
+    permission_classes = [IsOwnerOrReadOnly]
+    queryset = Profile.objects.all()
+    serializer_class = ProfileSerializer
+
+
+
+
+"""
 from django.http import Http404
 from rest_framework import status
 from rest_framework.views import APIView
@@ -5,6 +34,8 @@ from rest_framework.response import Response
 from .models import Profile
 from .serializers import ProfileSerializer
 from drf_friends.permissions import IsOwnerOrReadOnly
+
+
 
 
 class ProfileList(APIView):
@@ -43,4 +74,6 @@ class ProfileDetail(APIView):
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)        
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)  
+
+        """      
