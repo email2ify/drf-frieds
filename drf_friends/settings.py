@@ -67,13 +67,8 @@ DEBUG = 'DEV' in os.environ
 
 #DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = [
-    os.environ.get('ALLOWED_HOST'),
-    
-    '8000-email2ify-drffriends-ruwdiwwigr2.ws-eu99.gitpod.io',
-    "localhost"
-    
-]
+ALLOWED_HOSTS = ['localhost', 'friends12.herokuapp.com']
+
 
 if 'CLIENT_ORIGIN' in os.environ:
      CORS_ALLOWED_ORIGINS = [
