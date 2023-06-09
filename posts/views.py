@@ -1,4 +1,4 @@
-from rest_framework import generics, permissions
+from rest_framework import generics, permissions, filters
 from drf_friends.permissions import IsOwnerOrReadOnly
 from .models import Post
 from .serializers import PostSerializer
@@ -13,6 +13,17 @@ class PostList(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Post.objects.all()
 
+    """search filter for names and title for backend"""
+
+    filter_backends = [
+    filters.OrderingFilter,
+    filters.SearchFilter,
+    ]
+    search_fields = [
+        'owner__username',
+        'title',
+    ]
+
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
 
@@ -24,6 +35,13 @@ class PostDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = PostSerializer
     permission_classes = [IsOwnerOrReadOnly]
     queryset = Post.objects.all()
+        
+
+
+
+
+
+
 
 
 
