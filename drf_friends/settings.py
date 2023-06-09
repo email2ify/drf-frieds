@@ -66,7 +66,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = 'DEBUG' in os.environ
 
 #DEBUG = 'DEV' in os.environ
-"""
+
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
     
@@ -74,9 +74,9 @@ ALLOWED_HOSTS = [
     "localhost"
     
 ]
-"""
 
-ALLOWED_HOSTS = ['8000-email2ify-drffriends-ruwdiwwigr2.ws-eu99.gitpod.io', 'localhost']
+
+# ALLOWED_HOSTS = ['8000-email2ify-drffriends-ruwdiwwigr2.ws-eu99.gitpod.io', 'localhost']
 
 if 'CLIENT_ORIGIN' in os.environ:
      CORS_ALLOWED_ORIGINS = [
