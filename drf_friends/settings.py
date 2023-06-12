@@ -69,9 +69,9 @@ DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
-
+    
     '8000-email2ify-drf-friends-4izubol3qh.us2.codeanyapp.com',
-    "localhost"
+    'friends12.herokuapp.com'
 
 ]
 if 'CLIENT_ORIGIN' in os.environ:
