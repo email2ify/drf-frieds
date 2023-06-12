@@ -65,29 +65,25 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-#DEBUG = 'DEV' in os.environ
+# DEBUG = 'DEBUG' in os.environ
 
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
-    
-    'friends12.herokuapp.com',
+
+    '8000-email2ify-drf-friends-4izubol3qh.us2.codeanyapp.com',
     "localhost"
-    
+
 ]
-
-
-# ALLOWED_HOSTS = ['8000-email2ify-drffriends-ruwdiwwigr2.ws-eu99.gitpod.io', 'localhost']
-
 if 'CLIENT_ORIGIN' in os.environ:
-     CORS_ALLOWED_ORIGINS = [
-         os.environ.get('CLIENT_ORIGIN')
-     ]
+    CORS_ALLOWED_ORIGINS = [
+        os.environ.get('CLIENT_ORIGIN')
+    ]
 else:
-     CORS_ALLOWED_ORIGIN_REGEXES = [
-         r"^https://.*\.gitpod\.io$",
-     ]
+    CORS_ALLOWED_ORIGIN_REGEXES = [
+        r"^https://.*\.gitpod\.io$",
+    ]
 
-CORS_ALLOW_CREDENTIALS = True     
+CORS_ALLOW_CREDENTIALS = True
 # Application definition
 
 INSTALLED_APPS = [
