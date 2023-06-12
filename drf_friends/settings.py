@@ -72,7 +72,6 @@ DEBUG = 'DEV' in os.environ
 ALLOWED_HOSTS = ['localhost', 'friendsapp12.herokuapp.com']
 
 
-
 """
 
 ALLOWED_HOSTS = [
