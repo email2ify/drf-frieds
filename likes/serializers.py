@@ -3,14 +3,11 @@ from rest_framework import serializers
 from likes.models import Like
 
 
-
 class LikeSerializer(serializers.ModelSerializer):
 
     """Serializer for the Comment model and returning list of Comment instances"""
-    
+
     owner = serializers.ReadOnlyField(source='owner.username')
-
-
 
     class Meta:
         model = Like
@@ -21,5 +18,5 @@ class LikeSerializer(serializers.ModelSerializer):
             return super().create(validated_data)
         except IntegrityError:
             raise serializers.ValidationError({
-                'detail': 'duplicate likes'
+                'detail': 'possible duplicate'
             })

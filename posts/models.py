@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class Post(models.Model):
     """
-    Post model for User instance for image and countries with a 
+    Post model for User instance for wildlife image and countries with a 
     default image.url.
     """
     image_filter_choices = [

@@ -71,6 +71,7 @@ DEBUG = 'DEV' in os.environ
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
 
+
     '8000-email2ify-drf-friends-blqrkgnn9w.us2.codeanyapp.com',
     "localhost"
 
@@ -115,6 +116,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'rest_framework',
+    'django_filters',
 
     'rest_framework.authtoken',
     'dj_rest_auth',
