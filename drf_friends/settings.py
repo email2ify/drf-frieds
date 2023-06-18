@@ -88,6 +88,7 @@ if 'CLIENT_ORIGIN' in os.environ:
 if 'CLIENT_ORIGIN' in os.environ:
     CORS_ALLOWED_ORIGINS = [
         os.environ.get('CLIENT_ORIGIN'),
+        "http://localhost:3000",
         os.environ.get('CLIENT_ORIGIN_DEV'),
     ]
 
@@ -102,6 +103,7 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
 
 
 CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_ALLOW_ALL = True
 
 
 # Application definition
