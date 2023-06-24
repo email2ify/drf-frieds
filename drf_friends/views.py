@@ -13,6 +13,8 @@ def root_route(request):
     })
 
 # dj-rest-auth logout view fix
+
+
 @api_view(['POST'])
 def logout_route(request):
     response = Response()
@@ -34,4 +36,4 @@ def logout_route(request):
         samesite=JWT_AUTH_SAMESITE,
         secure=JWT_AUTH_SECURE,
     )
-    return response     
+    return response
