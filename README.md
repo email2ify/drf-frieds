@@ -37,7 +37,7 @@ Stories were assigned to epics, prioritized under the Todo, In progress, and Don
 
 The Kanban board was created using github projects and can be located [here](https://github.com/users/email2ify/projects/13/views/1) and can be viewed to see more information on the project cards.The documentation tasks have an acceptance criteria in order to define the functionality that marks that story as done or in progress.
 
-![Kanban](https://.PNG)
+![Capture18](https://github.com/email2ify/Projecttest-React/assets/110549305/b625108b-a697-4ae6-9489-173d6af972d8)
 
 ### Epics
 
