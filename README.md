@@ -37,7 +37,7 @@ The Kanban board was created using github projects and can be located [here](htt
 
 ![Capture18](https://github.com/email2ify/Projecttest-React/assets/110549305/b625108b-a697-4ae6-9489-173d6af972d8)
 
-### Epics
+## Epics
 
 **Set Up**
 
@@ -63,7 +63,7 @@ This aspect covers all API endpoint creation and database connections relating t
 <hr>
 <br>
 
-### User Stories
+## User Stories
 
 **By Epics** 
 
@@ -387,7 +387,7 @@ source venv/bin/activate \
 pip install -r requirements.txt
 ```
 
-### Forking
+## Forking
 
 Most commonly, forks are used to either propose changes to someone else's project or to use someone else's project as a starting point for your own idea.
 
