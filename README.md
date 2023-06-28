@@ -33,9 +33,9 @@ The purpose of this API is to provide a backend service to allow the Friends use
 
 This project was developed using agile methodologies and features in incremental loop. 
 
-Stories were assigned to epics, prioritized under the Todo, In progress, and Done. It was done this way to ensure that all core requirements were completed first to give the project a balance, with features being added.
+Stories were assigned to epics, prioritized under the Todo, In progress, and Done. It was done this way to ensure that all requirements were completed first to give the project a balance, with features being added one after the other..
 
-The Kanban board was created using github projects and can be located [here](https://github.com/email2ify/Projecttest-API/issues)) and can be viewed to see more information on the project cards.The documentation tasks have an acceptance criteria in order to define the functionality that marks that story as done.
+The Kanban board was created using github projects and can be located [here](https://github.com/users/email2ify/projects/13/views/1) and can be viewed to see more information on the project cards.The documentation tasks have an acceptance criteria in order to define the functionality that marks that story as done or in progress.
 
 ![Kanban](https://.PNG)
 
