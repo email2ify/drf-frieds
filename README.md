@@ -84,7 +84,7 @@ This aspect covers all API endpoint creation and database connections relating t
 * I needed to create a new blank profile with default image when a user is created.
 * I needed to create list of profiles diplaying on a list
 
-### API Endpoints
+### API-Endpoints
 
 User Story:
 
