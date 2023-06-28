@@ -18,10 +18,8 @@ DRF_Friends API is the backend service used by the [Friends Wildlife](https://gi
 * [Deployment](#Deployment) 
     * [Heroku Deployment](#Heroku-Deployment)
     * [GCP](#Google-Cloud-Platform)
-    * [Fork Project](#Fork-Project)
-* [Credits](#Credits)
-  * [Content](#Content)
-  * [Acknowledgements](#Acknowledgements)
+    * [Fork Project](#Forking)
+
 
 ## Development Goals
 
