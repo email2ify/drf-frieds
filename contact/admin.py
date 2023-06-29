@@ -1,10 +1,12 @@
 """
 A module for admin in the contact app
 """
-# Imports
 
 from django.contrib import admin
+
+# Internal
 from .models import Contact
+
 
 
 @admin.register(Contact)
