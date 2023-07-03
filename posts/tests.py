@@ -114,19 +114,3 @@ class PostDetailViewTests(APITestCase):
         self.client.login(username='Stan', password='pass')
         response = self.client.put('/posts/1/', {'title': 'new title'})
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-
-    def test_create_resource(self):
-        # Replace 'resource-list' with your actual API endpoint
-        url = reverse(
-            '8000-email2ify-drf-friends-blqrkgnn9w.us2.codeanyapp.com')
-
-        # Data to be sent in the POST request
-        data = {
-
-            'field1': 'value1',
-
-        }
-
-        response = self.client.post(url, data, format='json')
-
-        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
