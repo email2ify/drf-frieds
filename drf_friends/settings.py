@@ -72,8 +72,7 @@ ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
 
 
-    
-    '3000-email2ify-friends-e91o0vlncxw.ws-eu101.gitpod.io',
+    '88000-email2ify-drf-friends-blqrkgnn9w.us2.codeanyapp.com',
     "localhost"
 
 ]
