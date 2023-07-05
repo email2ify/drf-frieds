@@ -1,16 +1,9 @@
-"""
-A module for urls in the contact app
-"""
-# Imports
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# 3rd Party
 from django.urls import path
-# Internal
-from .views import ContactCreateAPIView
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+from .views import contactform
+
 
 app_name = 'contact'
 
 urlpatterns = [
-    path('contact/', ContactCreateAPIView.as_view(), name='contact-create'),
+    path('contact/', contactform.as_view(), name='contact-form'),
     ]

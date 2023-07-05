@@ -7,15 +7,16 @@ from .settings import (
 
 
 @api_view()
-def root_route(request):
+def home(request):
     return Response({
+        
         "message": "Welcome to my backend api for Friends Network!"
     })
 
 # dj-rest-auth logout view fix
 
 
-@api_view(['POST'])
+@api_view(['POST', 'DELETE'])
 def logout_route(request):
     response = Response()
     response.set_cookie(

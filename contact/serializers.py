@@ -1,6 +1,4 @@
 from rest_framework import serializers
-
-# Internal:
 from .models import Contact
 
 

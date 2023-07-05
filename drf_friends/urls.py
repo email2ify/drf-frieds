@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import root_route, logout_route
+from .views import home, logout_route
 
 urlpatterns = [
-    path('', root_route),
+    path('', home),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
     # our logout route has to be above the default one to be matched first

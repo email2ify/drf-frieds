@@ -1,9 +1,3 @@
-"""
-A module for models in the contact app
-"""
-# Imports
-
-
 from django.db import models
 
 
