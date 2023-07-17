@@ -17,12 +17,18 @@ class AnimalDetailSerializer(serializers.ModelSerializer):
         ]
 
     def get_image(self, obj):
-        """
-        Custom method to retrieve the image URL for the animal.
-        Uses the CloudinaryImage class from the cloudinary package to build the URL with custom dimensions.
-        """
-        if obj.image and hasattr(obj.image, 'url'):
-            return cloudinary.CloudinaryImage(obj.image.url).build_url(width=300, height=300, crop='fill')
+        if obj.image:
+            # transformations to apply to images
+            transformations = "c_fill,h_650,w_650,g_face,ar_1.0"
+            image_url = obj.image.url
+            # Find the index of "upload/" in the image URL
+            upload_index = image_url.find("upload/")
+
+            if upload_index != -1:
+                # Use str.replace to insert the transformations after "upload/"
+                transformed_url = image_url.replace("upload/", f"upload/{transformations}/", 1)
+                return transformed_url
+
         return None
 
 

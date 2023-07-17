@@ -74,6 +74,7 @@ ALLOWED_HOSTS = [
 
     'friends12.herokuapp.com',
     '8000-email2ify-drffriends-piiegiryrr7.ws-eu101.gitpod.io',
+    
     "localhost"
 
 ]
