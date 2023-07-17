@@ -60,6 +60,7 @@ class Animal(models.Model):
         ('Uganda', 'Uganda'),
         ('Zambia', 'Zambia'),
         ('Zimbabwe', 'Zimbabwe'),
+        ('Zimbab', 'Zimbab'),
     ]
 
     name = models.CharField(max_length=225, unique=True)
