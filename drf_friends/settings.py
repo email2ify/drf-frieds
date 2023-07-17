@@ -38,7 +38,7 @@ REST_FRAMEWORK = {
     )],
     'DEFAULT_PAGINATION_CLASS':
         'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10,
+    'PAGE_SIZE': 60,
     'DATETIME_FORMAT': '%d %b %Y',
 }
 if 'DEV' not in os.environ:
@@ -72,6 +72,7 @@ ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
 
 
+    'friends12.herokuapp.com',
     '8000-email2ify-drffriends-piiegiryrr7.ws-eu101.gitpod.io',
     "localhost"
 
@@ -128,12 +129,15 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'dj_rest_auth.registration',
     'corsheaders',
+    'multiselectfield',
     'contact',
 
     'profiles',
     'posts',
     'comments',
     'likes',
+    'animals',
+    
 
 
 ]

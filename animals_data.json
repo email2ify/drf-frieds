@@ -1,0 +1,14 @@
+
+{
+    "animals": [
+
+      {
+        "name": "Elephant",
+        "description": "The elephant is a majestic and intelligent mammal, known for its massive size, long trunk, and impressive tusks; it plays a vital role in ecosystems and exhibits complex social behaviors within its family groups.",
+        "slug": "elephant",
+        "image": "",
+        "countries": ["Kenya", "Tanzania", "South Africa"]
+      }
+    ]
+  }
+
