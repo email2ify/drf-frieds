@@ -57,7 +57,13 @@ This aspect covers all API endpoint creation and database connections relating t
 
 This aspect covers all API endpoint creation and database connections relating to the CRUD functionality of users who register.
 
+**Contact**
 
+This aspect covers all API endpoint creation and database connections relating to inquiries recieved by users.
+
+**Animals**
+
+This aspect covers all API endpoint creation and database for animals and african countries.
 <hr>
 <br>
 
@@ -81,6 +87,16 @@ This aspect covers all API endpoint creation and database connections relating t
 
 * I needed to create a new blank profile with default image when a user is created.
 * I needed to create list of profiles diplaying on a list
+
+**Contact**
+
+* For user, to be able to fill in form of enquiries 
+* For user, to able to fill in form of deleting of user account
+
+**Animal**
+
+* For user, to be able to see list of animals 
+* For user, to able to to see list of african countries
 
 ### API-Endpoints
 
