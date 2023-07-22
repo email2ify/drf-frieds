@@ -1,15 +1,15 @@
 # DRF_Friends API
 
-DRF_Friends API is the backend service used by the [Friends Wildlife](https://github.com/email2ify/friends).
+DRF_Friends API is the backend service application used by the [Friends Wildlife](https://github.com/email2ify/friends).
 <hr>
 <br>
-
+(<#friends-wildlife>)
 ## Table of Contents
 
-* [Agile Planning](#Agile-Planning)
-    * [User Stories](#User-Stories)
-    * [Epics](#Epics)
-* [API End Points](#API-End-Points)
+* [Agile Planning](#agile-planning)
+    * [User Stories](#user-stories)
+    * [Epics](#epics)
+* [API End Points](#api-endpoints)
 * [Security](#Security)
 * [Technologies](#Technologies)
 * [Testing](#Testing)
