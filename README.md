@@ -1,22 +1,25 @@
 # DRF_Friends API
 
+💻 [Live link](https://friendsa.herokuapp.com/)
+
 DRF_Friends API is the backend service application used by the [Friends Wildlife](https://github.com/email2ify/friends).
 <hr>
 <br>
-(<#friends-wildlife>)
+
 ## Table of Contents
 
 * [Agile Planning](#agile-planning)
     * [User Stories](#user-stories)
     * [Epics](#epics)
 * [API End Points](#api-endpoints)
-* [Security](#Security)
-* [Technologies](#Technologies)
-* [Testing](#Testing)
-* [Deployment](#Deployment) 
-    * [Heroku Deployment](#Heroku-Deployment)
-    * [GCP](#Google-Cloud-Platform)
-    * [Fork Project](#Forking)
+* [Security](#security)
+* [Technologies Used](#technologies-used)
+* [Testing](#testing)
+* [Deployment](#deployment) 
+    * [Heroku Deployment](#heroku-deployment)
+    * [GCP](#google-cloud-platform)
+    * [Fork Project](#forking)
+    * [Credits](#credits)
 
 
 ## Development Goals
@@ -43,23 +46,31 @@ This aspect covers all the initial setup of the Django application and Django RE
 
 **Posts**
 
-This aspect covers all API endpoint creation and database connections relating to the CRUD functionality of user posts.
+* This aspect covers all API endpoint creation and database connections relating to the CRUD functionality of user posts.
 
 **Comments**
 
 This aspect covers all API endpoint creation and database connections relating to the CRUD functionality of user comments in relation to posts.
+* The Comment model contains the following fields: owner, task, created_on, updated_on and comment_body
+* ForeignKey relation between the ownner and User id field
+* ForeignKey relation between the task and Task id field
 
 **Profiles**
 
-This aspect covers all API endpoint creation and database connections relating to the CRUD functionality of user created profiles.
+* This aspect covers all API endpoint creation and database connections relating to all profile posts.
 
 **User**
 
-This aspect covers all API endpoint creation and database connections relating to the CRUD functionality of users who register.
+* This aspect covers all API endpoint creation and database connections relating to the CRUD functionality of users who register.
+* ForeignKey relation with the Comment model owner
+* The User model contains information about the user. It is part of the Django allauth library.
+* One-to-one relation with the Profile model owner field
 
 **Contact**
 
-This aspect covers all API endpoint creation and database connections relating to inquiries recieved by users.
+* This aspect covers all API endpoint creation and database connections relating to inquiries recieved by users.
+*The Contact model contains the following fields: reason, name, email, message and
+message date
 
 **Animals**
 
@@ -68,6 +79,10 @@ This aspect covers all API endpoint creation and database for animals and africa
 <br>
 
 ## User Stories
+
+The back-end section deals on its administration side.
+My user story:
+* As an admin, I want to be able to create, edit and delete users, add species, countries, comments , so that I can take care of the application content,used by the frontend users and also remove any inappropriate content sent by users on the general enquiring form.
 
 **By Epics** 
 
@@ -138,7 +153,7 @@ Endpoint: /users/<int:pk>/
 
 Methods:
 * GET - Used to view single user profile
-* PUT - Used to update an user profile
+* PUT - Used to update user profile
 * DELETE - Used to delete user profile
 
 
@@ -164,33 +179,25 @@ Methods:
 * DELETE - Used to delete a post
 
 
-User Story:
-
-I want to create a new blank profile with default image when a user is created.
-
-Implementation:
-
-In the profiles app, a signal was created in order to create a new user profile on signup.
-
 
 User Story:
 
- I want user to be able to get a list of profiles
+ I want user to be able to get profile posts
 
 Implementation:
 
 Endpoint: /profiles/
 
 Methods:
-* POST - Used to create post
-* GET - Used to get a list of posts
+
+* GET - Used to get profile posts
 
 Endpoint: /profiles/<int:pk>/
 
 Methods:
 * GET - Get a single profile
-* PUT - Used to update a single profile
-* DELETE - Used to delete a profile
+
+
 
 
 ## Security
@@ -198,7 +205,7 @@ Methods:
 A permissions class was added called "IsOwnerOrReadOnly" to ensure only users who create the content are able to edit or delete it and the GCP IAMS permissions for service account.
 to minimum permissions granted.
 
-## Technologies
+## Technologies Used
 
 * Git
     * Used for version control
@@ -217,8 +224,44 @@ to minimum permissions granted.
 <hr>
 <br>
 
+
+### Libraries & Tools
+
+- [Cloudinary](https://cloudinary.com/) - File storage. Justification: I used this to store static files
+- [Graphviz](https://dreampuf.github.io/GraphvizOnline/) - Image generator. Justification: I used this used for the database model diagram
+- [Git](https://git-scm.com/) - Version control system. Justification: I used this for version control and to push the code to GitHub
+- [GitHub](https://github.com/) - Cloud based hosting service. Justification: I used this as a remote repository to store project code
+- [Gitpod](https://gitpod.io/workspaces) - Cloud development environment. Justification: I used this to host a virtual workspace
+- [Heroku](https://heroku.com) - Cloud platform. Justification: I used this was used to deploy the project into live environment
+- [Django REST Framework](https://www.django-rest-framework.org/) - API toolkit. Justification: I used this to build the back-end API
+- [Django AllAuth](https://django-allauth.readthedocs.io/en/latest/index.html) - API Module. Justification: I used this for user authentication
+- [Psycopg2](https://www.psycopg.org/docs/) - PostgreSQL database adaptor. Justification: This was used as a PostgreSQL database adapter for Python
+- [ElephantSQL](https://www.elephantsql.com/) - Database hosting service – Justification: This was used as the deployed project on Heroku uses an ElephantSQL database
+
+##### Back to [top](#table-of-contents)
+
+
+## Validation
+
+### Python Validation
+
+PEP8 [Pycodestyle](https://pypi.org/project/pycodestyle/) was used for errors and warnings.
+
+All folders were run through flake8. Several issues appeared with various reasons, lines too long, blank spaces, indentation and docstrings.
+
+**Bugs and their fixes**
+ 
+ 500 error as a bug occurred on post and profile form submissions, which was later removed the dublicate causing the errors
+
+<hr>
+<br>
+
+<br>
+
 ## Python Packages
+
 <details open>
+   
 <summary> Details of packages </summary>
 
 * dj-database-url==1.0.0
@@ -290,23 +333,12 @@ Auto installed as package dependencies with django-storages[GOOGLE] to aid conne
 
 ## Testing
 
-Unit tests in posts app
+The following tests were carried out on the app:
+1. Manual testing of user stories: [Manuel testing Folder](https://github.com/email2ify/drf_friends/tree/main/docs/testing/manual)
+2. Automated testing : [Automated Testing Folder](https://github.com/email2ify/drf_friends/tree/main/docs/testing/automated)
 
 ![Post Tests]()
 
-
-**Validator Results**
-
-All folders were run through flake8. Several issues appeared with various reasons, lines too long, blank spaces, indentation and docstrings.
-
-I was ......
-
-
-**Bugs and their fixes**
-
- 500 error as a bug occurred on post and profile form submissions, which I later removed the dublicate causing the errors
-<hr>
-<br>
 
 ## Deployment
 
@@ -327,7 +359,7 @@ The following git commands were used throughout development to push code to the 
 
 ## Heroku Deployment
 
-The site was deployed to Heroku with the foolwing steps:
+The site was deployed to Heroku with the following steps:
 
 * Navigate to heroku and create an account
 * Click the new button in the top right corner
@@ -358,7 +390,7 @@ The site was deployed to Heroku with the foolwing steps:
 
 ## Google Cloud Storage
 
-To set up cloud and service account. Please see - [Medium Article](https://medium.com/@mohammedabuiriban/how-to-use-google-cloud-storage-with-django-application-ff698f5a740f). The service account credentials will be needed for deployment.
+To set up cloud and service account. - [Medium Article](https://medium.com/@mohammedabuiriban/how-to-use-google-cloud-storage-with-django-application-ff698f5a740f). The service account credentials will be needed for deployment.
 
 **Code** 
 
@@ -411,3 +443,11 @@ Most commonly, forks are used to either propose changes to someone else's projec
 
 - This will create a duplicate of the full project in your GitHub Repository.
 
+
+## Credits
+
+Code Institute.
+<br>
+Django REST API walkthrough project ['Moments'](https://github.com/Code-Institute-Solutions/drf-api).
+
+##### Back to [top](#table-of-contents)
