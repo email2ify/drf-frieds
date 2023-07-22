@@ -2,10 +2,10 @@
 
 💻 [Live link](https://friends12.herokuapp.com/)
 
-DRF_Friends API is the backend service application used by the [Friends Wildlife](https://github.com/email2ify/friends).
+DRF_Friends API is the backend service application used by the [Friends Wildlife](https://friendsa.herokuapp.com).
 <hr>
 
-
+https://friendsa.herokuapp.com/
 ## Table of Contents
 
 * [Agile Planning](#agile-planning)
