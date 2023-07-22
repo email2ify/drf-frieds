@@ -17,7 +17,7 @@ DRF_Friends API is the backend service application used by the [Friends Wildlife
 * [Testing](#testing)
 * [Deployment](#deployment) 
     * [Heroku Deployment](#heroku-deployment)
-    * [GCP](#google-cloud-platform)
+    * [Cloud](#cloud)
     * [Fork Project](#forking)
     * [Credits](#credits)
 
@@ -337,7 +337,160 @@ The following tests were carried out on the app:
 1. Manual testing of user stories: [Manuel testing Folder](https://github.com/email2ify/drf_friends/tree/main/docs/testing/manual)
 2. Automated testing : [Automated Testing Folder](https://github.com/email2ify/drf_friends/tree/main/docs/testing/automated)
 
-![Post Tests]()
+
+
+
+
+
+
+### Manual testing of user stories
+
+- As an admin, I want to be able to create, edit and delete the users, posts, comments and likes, remove country or add animal so that I can have a control over the content of the application.
+
+**Test** | **Action** | **Expected Result** | **Actual Result**
+-------- | ------------------- | ------------------- | -----------------
+User | Create, update & delete user | A user can be created, edited or deleted | Works as expected
+
+Profile | Create, update & delete | User profile can be created, edited or deleted | Works as expected
+Comment | Create, update & delete | A comment can be created, edited or deleted | Works as expected
+Contact | Create & delete | A Contact message can be created or deleted | Works as expected
+Animals | Create & delete | An animal can be created,jut by uploading images or deleted | Works as expected
+Countries | Create & delete | From the data lists of countries, countris can be added (created) or remove (deleted) | Works as expected
+
+
+<details><summary>Screenshots - USER</summary>
+    <details><summary>Create user</summary>
+    <img src="docs/testing/manual/user-created.PNG">
+    <br>
+    <img src="docs/testing/manual/user-add.PNG">
+    <br>
+    <img src="docs/testing/manual/user-added-confirmed.PNG">
+    <br>
+    </details>
+</details>
+
+
+
+<details><summary>Screenshots - PROFILE</summary>
+    <details><summary>Update profile</summary>
+    <img src="docs/testing/manual/profiles.PNG">
+    <br>
+    <img src="docs/testing/manual/profile-update.PNG">
+    <br>
+    <img src="docs/testing/manual/profile-update-confirmed.PNG">
+    <br>     
+    </details>
+    <details><summary>Delete profile</summary>
+    <img src="docs/testing/manual/profile-delete1.PNG">
+    <br>
+    <img src="docs/testing/manual/profile-delete-notification.PNG">
+    <br>
+    <img src="docs/testing/manual/profile-delete-confirmed.PNG">
+    <br>
+    </details>
+</details>
+
+
+<details><summary>Screenshots - COMMENT</summary>
+    <details><summary>Create comment</summary>
+    <img src="docs/testing/manual/comment-create2.PNG">
+    <br>
+    <img src="docs/testing/manual/comment-create3.PNG">
+    <br>
+    <img src="docs/testing/manual/comment-create.PNG">
+    <br>
+    </details>
+    <details><summary>Update comment</summary>
+    <img src="docs/testing/manual/comment-create4.PNG">
+    <br>
+    <img src="docs/testing/manual/commentcreate-edited6.PNG">
+    </details>
+    <details><summary>Delete comment</summary>
+    <img src="docs/testing/manual/comment-deleted notification.PNG">
+    <br>
+    </details>
+</details>
+
+
+
+
+
+<details><summary>Screenshots - Contact</summary>
+    <details><summary>Create - Contact message</summary>
+    <img src="docs/testing/manual/contact-create-test-1.png">
+    <br>
+    <img src="docs/testing/manual/contact-create-test-2.png">
+    <br>
+    </details>
+    <details><summary>Delete - Contact message (superuser only)</summary>
+    <img src="docs/testing/manual/contact-delete-test-1.png">
+    <br>
+    <img src="docs/testing/manual/contact-delete-test-2.png">
+    <br>
+    <img src="docs/testing/manual/contact-delete-test-3.png">
+    <br>
+    <img src="docs/testing/manual/contact-delete-test-4.png">
+    <br>
+    </details>
+</details>
+
+
+
+
+
+
+
+
+<details><summary>Screenshots - PACK</summary>
+    <details><summary>Create pack</summary>
+    <img src="docs/testing/manual/pack-create-test-1.png">
+    <br>
+    <img src="docs/testing/manual/pack-create-test-2.png">
+    <br>
+    <img src="docs/testing/manual/pack-create-test-3.png">
+    <br>
+    </details>
+    <details><summary>Edit pack</summary>
+    <img src="docs/testing/manual/pack-edit-test-1.png">
+    <br>
+    <img src="docs/testing/manual/pack-edit-test-2.png">
+    <br>
+    <img src="docs/testing/manual/pack-edit-test-3.png">
+    <br>
+    </details>
+    <details><summary>Delete pack</summary>
+    <img src="docs/testing/manual/pack-delete-test-1.png">
+    <br>
+    <img src="docs/testing/manual/pack-delete-test-2.png">
+    <br>
+    <img src="docs/testing/manual/pack-delete-test-3.png">
+    <br>
+    </details>
+</details>
+
+<details><summary>Screenshots - WATCH</summary>
+    <details><summary>Create - Watch Task</summary>
+    <img src="docs/testing/manual/watch-create-test-1.png">
+    <br>
+    <img src="docs/testing/manual/watch-create-test-2.png">
+    <br>
+    </details>
+    <details><summary>Delete - UnWatch Task</summary>
+    <img src="docs/testing/manual/watch-delete-test-1.png">
+    <br>
+    <img src="docs/testing/manual/watch-delete-test-2.png">
+    <br>
+    <img src="docs/testing/manual/watch-delete-test-3.png">
+    <br>
+    </details>
+</details>
+
+
+
+
+
+
+
 
 
 ## Deployment
@@ -388,6 +541,7 @@ The site was deployed to Heroku with the following steps:
 <hr>
 <br>
 
+## Cloud
 ## Google Cloud Storage
 
 To set up cloud and service account. - [Medium Article](https://medium.com/@mohammedabuiriban/how-to-use-google-cloud-storage-with-django-application-ff698f5a740f). The service account credentials will be needed for deployment.
