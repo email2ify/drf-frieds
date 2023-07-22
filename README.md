@@ -15,6 +15,7 @@ DRF_Friends API is the backend service application used by the [Friends Wildlife
 * [Security](#security)
 * [Technologies Used](#technologies-used)
 * [Testing](#testing)
+* [Database](#database)
 * [Deployment](#deployment) 
     * [Heroku Deployment](#heroku-deployment)
     * [Cloud](#cloud)
@@ -451,7 +452,6 @@ Automated testing was done using the Django Rest Framework APITestCase.
 </details>
 
 ## Database
-
 The image models representing the database structure of the application:
 <img src="docs/readme/Drf-friends-DataBase.png">
 
@@ -467,6 +467,8 @@ The following git commands were used throughout development to push code to the 
 ```git commit -m “commit message”``` - This command was used to commit changes to the local repository.
 
 ```git push``` - This command was used to push all committed code to the remote repository on github.
+
+## Deployment
 
 ## Heroku Deployment
 
