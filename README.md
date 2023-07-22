@@ -4,7 +4,7 @@
 
 DRF_Friends API is the backend service application used by the [Friends Wildlife](https://github.com/email2ify/friends).
 <hr>
-<br>
+
 
 ## Table of Contents
 
@@ -25,8 +25,7 @@ DRF_Friends API is the backend service application used by the [Friends Wildlife
 ## Development Goals
 
 The purpose of this API is to provide a backend service to allow the Friends users front end applications to render, Create, Read, Update and Delete operations via the user interface.
-<hr>
-<br>
+
 
 ## Agile Planning
 
@@ -74,9 +73,7 @@ message date
 
 **Animals**
 
-This aspect covers all API endpoint creation and database for animals and african countries.
-<hr>
-<br>
+* This aspect covers all API endpoint creation and database for animals and african countries.
 
 ## User Stories
 
@@ -128,20 +125,20 @@ User Story:
 
 Implementation:
 
-A google cloud bucket was created and a service account created to allow image uploads via the service account.
+* A google cloud bucket was created and a service account created to allow image uploads via the service account.
 
 
 User Story:
 
-As a user I can create a new account so that I can access all the features for signed up users
+* As a user I can create a new account so that I can access all the features for signed up users
 
 Implementation:
 
-Django rest framework and dj_rest_auth were installed and added to the url patterns and site packages to make use of their built in authentication system.
+* Django rest framework and dj_rest_auth were installed and added to the url patterns and site packages to make use of their built in authentication system.
 
 User Story:
 
-Create api views, so that they are available to the front end
+* Create api views, so that they are available to the front end
 
 Implementation:
 
@@ -198,8 +195,6 @@ Methods:
 * GET - Get a single profile
 
 
-
-
 ## Security
 
 A permissions class was added called "IsOwnerOrReadOnly" to ensure only users who create the content are able to edit or delete it and the GCP IAMS permissions for service account.
@@ -221,11 +216,7 @@ to minimum permissions granted.
     * Used for hosting the application
 
 
-<hr>
-<br>
-
-
-### Libraries & Tools
+## Libraries & Tools
 
 - [Cloudinary](https://cloudinary.com/) - File storage. Justification: I used this to store static files
 - [Graphviz](https://dreampuf.github.io/GraphvizOnline/) - Image generator. Justification: I used this used for the database model diagram
@@ -253,10 +244,6 @@ All folders were run through flake8. Several issues appeared with various reason
  
  500 error as a bug occurred on post and profile form submissions, which was later removed the dublicate causing the errors
 
-<hr>
-<br>
-
-<br>
 
 ## Python Packages
 
@@ -328,19 +315,14 @@ Auto installed as package dependencies with django-storages[GOOGLE] to aid conne
 * google-resumable-media==2.3.3
 * googleapis-common-protos==1.56.4
 </details>
-<hr>
-<br>
+
+##### Back to [top](#table-of-contents)
 
 ## Testing
 
 The following tests were carried out on the app:
 1. Manual testing of user stories: [Manuel testing Folder](https://github.com/email2ify/drf_friends/tree/main/docs/testing/manual)
 2. Automated testing : [Automated Testing Folder](https://github.com/email2ify/drf_friends/tree/main/docs/testing/automated)
-
-
-
-
-
 
 
 ### Manual testing of user stories
@@ -350,13 +332,12 @@ The following tests were carried out on the app:
 **Test** | **Action** | **Expected Result** | **Actual Result**
 -------- | ------------------- | ------------------- | -----------------
 User | Create, update & delete user | A user can be created, edited or deleted | Works as expected
-
+User | Change permissions | User permissions can be updated | Works as expected
 Profile | Create, update & delete | User profile can be created, edited or deleted | Works as expected
 Comment | Create, update & delete | A comment can be created, edited or deleted | Works as expected
 Contact | Create & delete | A Contact message can be created or deleted | Works as expected
 Animals | Create & delete | An animal can be created,jut by uploading images or deleted | Works as expected
-Countries | Create & delete | From the data lists of countries, countris can be added (created) or remove (deleted) | Works as expected
-
+Animals/Countries | Create & delete | From the data lists of countries, a country can be added (created) or remove (deleted) | Works as expected
 
 <details><summary>Screenshots - USER</summary>
     <details><summary>Create user</summary>
@@ -368,8 +349,6 @@ Countries | Create & delete | From the data lists of countries, countris can be 
     <br>
     </details>
 </details>
-
-
 
 <details><summary>Screenshots - PROFILE</summary>
     <details><summary>Update profile</summary>
@@ -411,89 +390,71 @@ Countries | Create & delete | From the data lists of countries, countris can be 
     </details>
 </details>
 
-
-
-
-
 <details><summary>Screenshots - Contact</summary>
     <details><summary>Create - Contact message</summary>
-    <img src="docs/testing/manual/contact-create-test-1.png">
+    <img src="docs/testing/manual/contactform-create1.PNG">
     <br>
-    <img src="docs/testing/manual/contact-create-test-2.png">
+    <img src="docs/testing/manual/contactform8.PNG">
     <br>
     </details>
     <details><summary>Delete - Contact message (superuser only)</summary>
-    <img src="docs/testing/manual/contact-delete-test-1.png">
+    <img src="docs/testing/manual/contact-delete3.PNG">
     <br>
-    <img src="docs/testing/manual/contact-delete-test-2.png">
+    <img src="docs/testing/manual/contact-delete-notification.PNG">
     <br>
-    <img src="docs/testing/manual/contact-delete-test-3.png">
-    <br>
-    <img src="docs/testing/manual/contact-delete-test-4.png">
+    <img src="docs/testing/manual/contact-delete-confirm.PNG">
     <br>
     </details>
 </details>
 
-
-
-
-
-
-
-
-<details><summary>Screenshots - PACK</summary>
-    <details><summary>Create pack</summary>
-    <img src="docs/testing/manual/pack-create-test-1.png">
+<details><summary>Screenshots - Animal</summary>
+    <details><summary>Create Animal</summary>
+    <img src="docs/testing/manual/addanima1.PNG">
     <br>
-    <img src="docs/testing/manual/pack-create-test-2.png">
+    <img src="docs/testing/manual/addanimal.PNG">
     <br>
-    <img src="docs/testing/manual/pack-create-test-3.png">
+    <img src="docs/testing/manual/animaladdcountry.PNG">
+    <br>
+    <img src="docs/testing/manual/animalcountries.PNG">
     <br>
     </details>
-    <details><summary>Edit pack</summary>
-    <img src="docs/testing/manual/pack-edit-test-1.png">
+    <details><summary>Edit Animal</summary>
+    <img src="docs/testing/manual/animalchange.PNG">
     <br>
-    <img src="docs/testing/manual/pack-edit-test-2.png">
-    <br>
-    <img src="docs/testing/manual/pack-edit-test-3.png">
+    <img src="docs/testing/manual/animalandlocation.PNG">
     <br>
     </details>
-    <details><summary>Delete pack</summary>
-    <img src="docs/testing/manual/pack-delete-test-1.png">
+    <details><summary>Delete Animal</summary>
+    <img src="docs/testing/manual/animaldeleted (2).PNG">
     <br>
-    <img src="docs/testing/manual/pack-delete-test-2.png">
-    <br>
-    <img src="docs/testing/manual/pack-delete-test-3.png">
+    <img src="docs/testing/manual/animaldeleted.PNG">
     <br>
     </details>
 </details>
 
-<details><summary>Screenshots - WATCH</summary>
-    <details><summary>Create - Watch Task</summary>
-    <img src="docs/testing/manual/watch-create-test-1.png">
-    <br>
-    <img src="docs/testing/manual/watch-create-test-2.png">
-    <br>
-    </details>
-    <details><summary>Delete - UnWatch Task</summary>
-    <img src="docs/testing/manual/watch-delete-test-1.png">
-    <br>
-    <img src="docs/testing/manual/watch-delete-test-2.png">
-    <br>
-    <img src="docs/testing/manual/watch-delete-test-3.png">
-    <br>
-    </details>
+### Automated testing
+
+Automated testing was done using the Django Rest Framework APITestCase.
+
+- Tests 
+
+<details><summary>Reports Testing</summary>
+<img src="docs/testing/automated/onecommenttest.PNG">
+<img src="docs/testing/automated/contactest.PNG">
+<img src="docs/testing/automated/profiletest.PNG">
+<img src="docs/testing/automated/testanimals.PNG">
+<img src="docs/testing/automated/testrun1.PNG">
 </details>
 
+<details><summary>Combined report</summary>
+<img src="docs/testing/automated/alltest.PNG">
+</details>
 
+## Database
 
+The image models representing the database structure of the application:
+<img src="docs/readme/Drf-friends-DataBase.png">
 
-
-
-
-
-
-## Deployment
 
 ## Version Control
 
@@ -506,9 +467,6 @@ The following git commands were used throughout development to push code to the 
 ```git commit -m “commit message”``` - This command was used to commit changes to the local repository.
 
 ```git push``` - This command was used to push all committed code to the remote repository on github.
-
-<hr>
-<br>
 
 ## Heroku Deployment
 
@@ -538,8 +496,7 @@ The site was deployed to Heroku with the following steps:
 * Scroll down to Manual deploy and choose the main branch
 * Click deploy
 
-<hr>
-<br>
+##### Back to [top](#table-of-contents)
 
 ## Cloud
 ## Google Cloud Storage
@@ -602,6 +559,6 @@ Most commonly, forks are used to either propose changes to someone else's projec
 
 Code Institute.
 <br>
-Django REST API walkthrough project ['Moments'](https://github.com/Code-Institute-Solutions/drf-api).
+Walkthrough project ['Moments'](https://github.com/Code-Institute-Solutions/drf-api).
 
 ##### Back to [top](#table-of-contents)
