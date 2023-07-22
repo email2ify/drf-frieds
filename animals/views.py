@@ -56,3 +56,17 @@ class CountriesWithAnimalsList(generics.ListAPIView):
         return Response(queryset)
 
 
+class AnimalSearchView(generics.ListAPIView):
+    serializer_class = AnimalListSerializer
+
+    def get_queryset(self):
+        query = self.request.query_params.get('q')
+
+        # Filter by or country
+        if query:
+            return Animal.objects.filter(
+                Q(name__icontains=query)
+            )
+
+        # Return all animals if no search parameters provided
+        return Animal.objects.all()
