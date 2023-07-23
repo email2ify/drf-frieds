@@ -3,11 +3,20 @@
 💻 [Live link](https://friends12.herokuapp.com/)
 
 DRF_Friends API is the backend service application used by the [Friends Wildlife](https://friendsa.herokuapp.com).
+<br>
+This backend api was created for Portfolio Project nr 5. 
+Diploma in Full Stack Software Development, at the [Code Institute](https://codeinstitute.net/)
+
+## Home Page
+
+When you first enter the API site, you are directed to the route Hompage, with a "message": "Welcome to my backend api for Friends Network!".
+
+![homepage](https://github.com/email2ify/drf_friends/assets/110549305/e618fed2-a6ed-4480-be76-90b5c3644399)
+
 <hr>
 
-https://friendsa.herokuapp.com/
 ## Table of Contents
-
+* [Homepage](#home-page)
 * [Agile Planning](#agile-planning)
     * [User Stories](#user-stories)
     * [Epics](#epics)
