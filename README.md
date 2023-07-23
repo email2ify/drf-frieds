@@ -331,9 +331,6 @@ Auto installed as package dependencies with django-storages[GOOGLE] to aid conne
 ## Testing
 
 The following tests were carried out on the app:
-1. Manual testing of user stories: [Manuel testing Folder](https://github.com/email2ify/drf_friends/tree/main/docs/testing/manual)
-2. Automated testing : [Automated Testing Folder](https://github.com/email2ify/drf_friends/tree/main/docs/testing/automated)
-
 
 ### Manual testing of user stories
 
@@ -346,7 +343,7 @@ User | Change permissions | User permissions can be updated | Works as expected
 Profile | Create, update & delete | User profile can be created, edited or deleted | Works as expected
 Comment | Create, update & delete | A comment can be created, edited or deleted | Works as expected
 Contact | Create & delete | A Contact message can be created or deleted | Works as expected
-Animals | Create & delete | An animal can be created,jut by uploading images or deleted | Works as expected
+Animals | Create & delete | An animal can be created,just by uploading images or deleted | Works as expected
 Animals/Countries | Create & delete | From the data lists of countries, a country can be added (created) or remove (deleted) | Works as expected
 
 <details><summary>Screenshots - USER</summary>
@@ -400,7 +397,7 @@ Animals/Countries | Create & delete | From the data lists of countries, a countr
     </details>
 </details>
 
-<details><summary>Screenshots - Contact</summary>
+<details><summary>Screenshots - CONTACT</summary>
     <details><summary>Create - Contact message</summary>
     <img src="docs/testing/manual/contactform-create1.PNG">
     <br>
@@ -417,7 +414,7 @@ Animals/Countries | Create & delete | From the data lists of countries, a countr
     </details>
 </details>
 
-<details><summary>Screenshots - Animal</summary>
+<details><summary>Screenshots - ANIMAL</summary>
     <details><summary>Create Animal</summary>
     <img src="docs/testing/manual/addanima1.PNG">
     <br>
@@ -456,7 +453,7 @@ Automated testing was done using the Django Rest Framework APITestCase.
 <img src="docs/testing/automated/testrun1.PNG">
 </details>
 
-<details><summary>Combined report</summary>
+<details><summary>Combined Report</summary>
 <img src="docs/testing/automated/alltest.PNG">
 </details>
 
