@@ -450,9 +450,18 @@ Automated testing was done using the Django Rest Framework APITestCase.
 </details>
 
 ## Database
-The image models representing the database structure of the application:
+
+**Dbeaver Entity Relationship Diagram**
+
+The image models representing the database structure of the application.
+It was generated using the Dbeaver ER diagram and the link for the tutorial  [Download instruction here](https://technology.amis.nl/database/quick-start-with-free-managed-postgresql-database-on-elephantsql/)
+
+<br>
+
 <img src="docs/readme/Drf-friends-DataBase.png">
 
+
+https://dbeaver.com/
 
 ## Version Control
 
