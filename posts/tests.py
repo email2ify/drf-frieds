@@ -21,8 +21,7 @@ class PostListViewTests(APITestCase):
         Post.objects.create(owner=Stan, title='WildLife title')
         response = self.client.get('/posts/')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        print(response.data)
-        print(len(response.data))
+
 
     """ test users can create post"""
 

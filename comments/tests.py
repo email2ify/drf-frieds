@@ -13,4 +13,3 @@ class CommentTests(APITestCase):
 
         response = self.client.post('/comments/', {'comments': 'test comment'})
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
-
