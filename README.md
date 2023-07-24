@@ -27,9 +27,10 @@ When you first enter the API site, you are directed to the route Hompage, with a
 * [Database](#database)
 * [Deployment](#deployment) 
     * [Heroku Deployment](#heroku-deployment)
-    * [Cloud](#cloud)
     * [Fork Project](#forking)
     * [Credits](#credits)
+    * [Acknowledgements](#acknowledgements)
+
 
 
 ## Development Goals
@@ -45,7 +46,8 @@ Stories were assigned to epics, prioritized under the Todo, In progress, and Don
 
 The Kanban board was created using github projects and can be located [here](https://github.com/users/email2ify/projects/13/views/1) and can be viewed to see more information on the project cards.The documentation tasks have an acceptance criteria in order to define the functionality that marks that story as done or in progress.
 
-![Capture18](https://github.com/email2ify/Projecttest-React/assets/110549305/b625108b-a697-4ae6-9489-173d6af972d8)
+
+![cap](https://github.com/email2ify/drf_friends/assets/110549305/69628dd3-2d5b-4dd9-b983-6c22393ff158)
 
 ## Epics
 
@@ -78,7 +80,7 @@ This aspect covers all API endpoint creation and database connections relating t
 **Contact**
 
 * This aspect covers all API endpoint creation and database connections relating to inquiries recieved by users.
-*The Contact model contains the following fields: reason, name, email, message and
+* The Contact model contains the following fields: reason, name, email, message and
 message date
 
 **Animals**
@@ -220,8 +222,6 @@ to minimum permissions granted.
     * Main framework used for application creation
 * Django REST Framework
     * Framework used for creating API
-* Google Cloud Platform
-    * Used for static image hosting
 * Heroku
     * Used for hosting the application
 
@@ -316,14 +316,6 @@ Installed as package dependcies with above installations:
 * tzdata==2022.2
 * urllib3==1.26.12
 
-Auto installed as package dependencies with django-storages[GOOGLE] to aid connection to google cloud buckets for static image hosting:
-* google-api-core==2.10.0
-* google-auth==2.11.0
-* google-cloud-core==2.3.2
-* google-cloud-storage==2.5.0
-* google-crc32c==1.5.0
-* google-resumable-media==2.3.3
-* googleapis-common-protos==1.56.4
 </details>
 
 ##### Back to [top](#table-of-contents)
@@ -494,9 +486,6 @@ The site was deployed to Heroku with the following steps:
   * ALLOWED_HOST:
   * CLIENT_ORIGIN: url for the client front end react application that wil be making requests to these APIs
   * CLIENT_ORIGIN_DEV: address of the local server used to preview and test UI during development of the front end client application
-  * GOOGLE_APPLICATION_CREDENTIALS:
-  * GOOGLE_CREDENTIALS: json file with authentication keys and tokens to access the google cloud bucket where images are stored
-  * GS_BUCKET_NAME: Upload images to.
 
 * Click the deploy tab
 * Scroll down to Connect to GitHub and sign in , authorize when prompted
@@ -506,51 +495,6 @@ The site was deployed to Heroku with the following steps:
 
 ##### Back to [top](#table-of-contents)
 
-## Cloud
-## Google Cloud Storage
-
-To set up cloud and service account. - [Medium Article](https://medium.com/@mohammedabuiriban/how-to-use-google-cloud-storage-with-django-application-ff698f5a740f). The service account credentials will be needed for deployment.
-
-**Code** 
-
-Packages needed for deployment:
-
-* django-storages[google]
-* Pillow
-
-Create a profile file with the following line inside:
-
-```echo ${GOOGLE_CREDENTIALS} > /app/ga-creds.json```
-
-This line is used to instruct heroku that the GOOGLE_CREDENTIALS var is called ga-creds.json
-
-**Heroku**
-
-1. Log in to heroku and open the apps name
-2. Click settings
-3. Click Config vars
-4. Add the following variables:
-
-    * Key: GOOGLE_APPLICATION_CREDENTIALS -  Value: ga-creds.json
-    * Key: GOOGLE_CREDENTIALS - Value: json contents of the service account key
-    * Key: GS_BUCKET_NAME - Value: Name of the cloud where files are stored
-
-
-Windows:
-
-```
-python -m venv venv \
-venv/Scripts/activate \
-pip install -r requirements.txt
-```
-
-Mac:
-
-```
-python -m venv venv \
-source venv/bin/activate \
-pip install -r requirements.txt
-```
 
 ## Forking
 
@@ -565,8 +509,10 @@ Most commonly, forks are used to either propose changes to someone else's projec
 
 ## Credits
 
-Code Institute.
-<br>
-Walkthrough project ['Moments'](https://github.com/Code-Institute-Solutions/drf-api).
+Code Institute on Walkthrough project ['Moments'](https://github.com/Code-Institute-Solutions/drf-api).
+
+## Acknowledgements
+
+My Mentor Daisy 
 
 ##### Back to [top](#table-of-contents)
