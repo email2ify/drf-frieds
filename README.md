@@ -490,12 +490,11 @@ The site was deployed to Heroku with the following steps:
 * Select hobby dev and continue
 * Go to the settings tab and then click reveal config vars
 * Add the following config vars:
-  * SECRET_KEY: (Your secret key)
-  * DATABASE_URL: (This should already exist)
-  * ALLOWED_HOST:
-  * CLIENT_ORIGIN: url for the client front end react application that wil be making requests to these APIs
-  * CLIENT_ORIGIN_DEV: address of the local server used to preview and test UI during development of the front end client application
-
+* SECRET_KEY: (Your secret key)
+* DATABASE_URL: (This should already exist)
+* ALLOWED_HOST:
+* CLIENT_ORIGIN: url for the client front end react application that wil be making requests to these APIs
+* CLIENT_ORIGIN_DEV: address of the local server used to preview and test UI during development of the front end client application
 * Click the deploy tab
 * Scroll down to Connect to GitHub and sign in , authorize when prompted
 * In the search box, find the repositoy you want to deploy and click connect
