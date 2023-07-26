@@ -424,8 +424,6 @@ Animals/Countries | Create & delete | From the data lists of countries, a countr
 
 ### Automated testing
 
-### Automated testing
-
 Automated testing was done using the Django Rest Framework APITestCase.
 
 - Tests 
