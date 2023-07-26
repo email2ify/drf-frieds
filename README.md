@@ -349,7 +349,7 @@ Animals/Countries | Create & delete | From the data lists of countries, a countr
     <img src="docs/testing/manual/profile-update-confirmed.PNG">
     <br>     
     </details>
-    <details><summary>Delete profile</summary>
+    <details><summary>Delete profile | Works as expected</summary>
     <img src="docs/testing/manual/profile-delete1.PNG">
     <br>
     <img src="docs/testing/manual/profile-delete-notification.PNG">
@@ -369,12 +369,12 @@ Animals/Countries | Create & delete | From the data lists of countries, a countr
     <img src="docs/testing/manual/comment-create.PNG">
     <br>
     </details>
-    <details><summary>Update comment</summary>
+    <details><summary>Update comment | Works as expected</summary>
     <img src="docs/testing/manual/comment-create4.PNG">
     <br>
     <img src="docs/testing/manual/commentcreate-edited6.PNG">
     </details>
-    <details><summary>Delete comment</summary>
+    <details><summary>Delete comment | Works as expected</summary>
     <img src="docs/testing/manual/comment-deleted notification.PNG">
     <br>
     </details>
@@ -408,13 +408,13 @@ Animals/Countries | Create & delete | From the data lists of countries, a countr
     <img src="docs/testing/manual/animalcountries.PNG">
     <br>
     </details>
-    <details><summary>Edit Animal</summary>
+    <details><summary>Edit Animal | Works as expected</summary>
     <img src="docs/testing/manual/animalchange.PNG">
     <br>
     <img src="docs/testing/manual/animalandlocation.PNG">
     <br>
     </details>
-    <details><summary>Delete Animal</summary>
+    <details><summary>Delete Animal | Works as expected</summary>
     <img src="docs/testing/manual/animaldeleted (2).PNG">
     <br>
     <img src="docs/testing/manual/animaldeleted.PNG">
