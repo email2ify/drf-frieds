@@ -424,26 +424,30 @@ Animals/Countries | Create & delete | From the data lists of countries, a countr
 
 ### Automated testing
 
+### Automated testing
+
 Automated testing was done using the Django Rest Framework APITestCase.
 
 - Tests 
 
 <details><summary>Reports Testing on Contact | Works as expected</summary>
 
-Test to ensure non auth user can send a contact form | Works as expected<br>
-Test if user can send a contact form | Works as expected<br>
-To verify if contact form can be posted without filling in any fields | Works as expected<br>
+Test to ensure non auth user can send a contact form <br>
+Test if user can send a contact form <br>
+To verify if contact form can be posted without filling in any fieldsbr>
 <img src="docs/testing/automated/contactest.PNG">
-<br>
-<details><summary>Reports Testing on Profile | Works as expected</summary>
+</details>
 
+<details><summary>Reports Testing on Profile | Works as expected</summary>
 Test to view existing user profile <br>
 Test to view profile which that does not exist <br>
 Test user can update their profile when not logged in <br>
 Test user that can update a profile they own <br>
 Test user cannot update other users profiles<br>
 <img src="docs/testing/automated/profiletest.PNG">
-<br>
+
+</details>
+
 <details><summary>Reports Testing on Animals | Works as expected</summary>
 Test the GET request to retrieve the details of a specific animal <br>
 Test the GET request for a non-existent animal detail <br>
@@ -451,16 +455,24 @@ Test the GET request to retrieve the list of animals for a specific country <br>
 Test the GET request for a non-existent country <br>
 Test the GET request for an empty list of animals for a specific country<br>
 <img src="docs/testing/automated/testanimals.PNG">
-<br>
-<details><summary>Reports Testing on Comment  | Works as expected</summary>
-Test user can not create comment<br>
+</details>
+
+<details><summary>Reports Testing on Comment | Works as expected</summary>
+Test Unauthenticated user should not be able to create a comment<br>
+Test Authenticated user should be able to create a comment <br>
+Test List all comments <br>
+Test Filter comments by post <br>
+Test Retrieve a specific comment <br>
+Test Authenticated owner should be able to update their comment<br> 
+Test Authenticated owner should be able to delete their comment<br> 
 <img src="docs/testing/automated/onecommenttest.PNG">
-<br>
 </details>
 
 <details><summary>All Test Report | Works as expected </summary>
 <img src="docs/testing/automated/alltest.PNG">
 </details>
+
+##### Back to [top](#table-of-contents)
 
 ## Database
 
