@@ -428,15 +428,37 @@ Automated testing was done using the Django Rest Framework APITestCase.
 
 - Tests 
 
-<details><summary>Reports Testing on Comments,Contact,Profile and Animals | Works as expected</summary>
-<img src="docs/testing/automated/onecommenttest.PNG">
+<details><summary>Reports Testing on Contact | Works as expected</summary>
+
+Test to ensure non auth user can send a contact form | Works as expected<br>
+Test if user can send a contact form | Works as expected<br>
+To verify if contact form can be posted without filling in any fields | Works as expected<br>
 <img src="docs/testing/automated/contactest.PNG">
+<br>
+<details><summary>Reports Testing on Profile | Works as expected</summary>
+
+Test to view existing user profile <br>
+Test to view profile which that does not exist <br>
+Test user can update their profile when not logged in <br>
+Test user that can update a profile they own <br>
+Test user cannot update other users profiles<br>
 <img src="docs/testing/automated/profiletest.PNG">
+<br>
+<details><summary>Reports Testing on Animals | Works as expected</summary>
+Test the GET request to retrieve the details of a specific animal <br>
+Test the GET request for a non-existent animal detail <br>
+Test the GET request to retrieve the list of animals for a specific country <br>
+Test the GET request for a non-existent country <br>
+Test the GET request for an empty list of animals for a specific country<br>
 <img src="docs/testing/automated/testanimals.PNG">
-<img src="docs/testing/automated/testrun1.PNG">
+<br>
+<details><summary>Reports Testing on Comment  | Works as expected</summary>
+Test user can not create comment<br>
+<img src="docs/testing/automated/onecommenttest.PNG">
+<br>
 </details>
 
-<details><summary>All test Report | Works as expected </summary>
+<details><summary>All Test Report | Works as expected </summary>
 <img src="docs/testing/automated/alltest.PNG">
 </details>
 
@@ -451,8 +473,6 @@ It was generated using the Dbeaver ER diagram and the link for the tutorial  [Do
 
 <img src="docs/readme/Drf-friends-DataBase.png">
 
-
-https://dbeaver.com/
 
 ## Version Control
 
