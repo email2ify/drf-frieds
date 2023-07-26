@@ -3,6 +3,9 @@ import cloudinary
 from .models import Animal
 
 class AnimalDetailSerializer(serializers.ModelSerializer):
+    """
+    Serializer for detailed representation of a specific animal.
+    """
     image = serializers.SerializerMethodField()
 
     class Meta:
@@ -19,7 +22,7 @@ class AnimalDetailSerializer(serializers.ModelSerializer):
     def get_image(self, obj):
         if obj.image:
             # transformations to apply to images
-            transformations = "c_scale,h_300,w_600,"
+            transformations = "c_fill,h_350,w_600"
             image_url = obj.image.url
             # Find the index of "upload/" in the image URL
             upload_index = image_url.find("upload/")
@@ -33,6 +36,9 @@ class AnimalDetailSerializer(serializers.ModelSerializer):
 
 
 class AnimalListSerializer(AnimalDetailSerializer):
+    """
+    Serializer for listing animals with truncated descriptions and transformed image URLs.
+    """
     description = serializers.SerializerMethodField()
     image = serializers.SerializerMethodField()
 
@@ -49,6 +55,9 @@ class AnimalListSerializer(AnimalDetailSerializer):
         return None
 
     def get_image(self, obj):
+        """
+        Method to apply transformation to images
+        """
         if obj.image:
             # transformations to apply to images
             transformations = "c_fill,h_650,w_650,g_face,ar_1.0"
