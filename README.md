@@ -9,7 +9,8 @@ Diploma in Full Stack Software Development, at the [Code Institute](https://code
 
 ## Home Page
 
-When you first enter the API site, you are directed to the route Hompage, with a "message": "Welcome to my backend api for Friends Network!".
+The home page is displayed a route Hompage, with a "message": "Welcome to my backend api for Friends Network!".
+
 
 ![homepage](https://github.com/email2ify/drf_friends/assets/110549305/e618fed2-a6ed-4480-be76-90b5c3644399)
 
@@ -35,16 +36,16 @@ When you first enter the API site, you are directed to the route Hompage, with a
 
 ## Development Goals
 
-The purpose of this API is to provide a backend service to allow the Friends users front end applications to render, Create, Read, Update and Delete operations via the user interface.
+The purpose of this API is to provide a backend service to allow the Friends Wildlife users front end applications to render, Create, Read, Update and Delete operations via the user interface.
 
 
 ## Agile Planning
 
 This project was developed using agile methodologies and features in incremental loop. 
 
-Stories were assigned to epics, prioritized under the Todo, In progress, and Done. It was done this way to ensure that all requirements were completed first to give the project a balance, with features being added one after the other..
+Stories were assigned to epics, prioritized under the Todo, In progress, and Done. It was done this way to ensure that all requirements were completed first to give the project a balance, with features or task being added one after the other..
 
-The Kanban board was created using github projects and can be located [here](https://github.com/users/email2ify/projects/13/views/1) and can be viewed to see more information on the project cards.The documentation tasks have an acceptance criteria in order to define the functionality that marks that story as done or in progress.
+The Kanban board was created using github projects and can be located [here](https://github.com/users/email2ify/projects/13/views/1) and can be viewed to see more information on the project task cards.The documentation  have an acceptance criteria in order to define the functionality that marks that story as done or in progress.
 
 
 ![cap](https://github.com/email2ify/drf_friends/assets/110549305/69628dd3-2d5b-4dd9-b983-6c22393ff158)
@@ -89,9 +90,11 @@ message date
 
 ## User Stories
 
-The back-end section deals on its administration side.
+The back-end section deals on the administration side.
+
 My user story:
-* As an admin, I want to be able to create, edit and delete users, add species, countries, comments , so that I can take care of the application content,used by the frontend users and also remove any inappropriate content sent by users on the general enquiring form.
+
+* As an admin, I want to be able to create, edit and delete users, add species, countries, comments , so that I can take care of the application content,used by the frontend users and also remove any inappropriate content or image sent by users.
 
 **By Epics** 
 
@@ -110,12 +113,12 @@ My user story:
 **Profiles**
 
 * I needed to create a new blank profile with default image when a user is created.
-* I needed to create list of profiles diplaying on a list
+* I needed to be able to see profiles post 
 
 **Contact**
 
-* For user, to be able to fill in form of enquiries 
-* For user, to able to fill in form of deleting of user account
+* For user, I can be able to fill out an enquiries form 
+* For user, I can be able to reach out through the contact if any complaint arises or deleting of account
 
 **Animal**
 
@@ -126,33 +129,22 @@ My user story:
 
 User Story:
 
-* User can create a base project set up so that I can build out the features.`
+* User can create a project set up so that I can build the project features.
 
 Implementation:
-The settings were also edited to hide any secret variables and set dev and production environments.
-
-User Story:
-
-* Create the google cloud and create the connection to the project so that static images can be uploaded by users.
-
-Implementation:
-
-* A google cloud bucket was created and a service account created to allow image uploads via the service account.
-
+The settings were updated to hide secret variables and set dev and production environments.
 
 User Story:
 
 * As a user I can create a new account so that I can access all the features for signed up users
 
-Implementation:
-
-* Django rest framework and dj_rest_auth were installed and added to the url patterns and site packages to make use of their built in authentication system.
+Implementation: Django rest framework and dj_rest_auth were installed and added to the url patterns and site packages to make use of their built in authentication system.
 
 User Story:
 
 * Create api views, so that they are available to the front end
 
-Implementation:
+Implementation
 
 Methods:
 * POST - Used to create a users
@@ -168,9 +160,9 @@ Methods:
 
 User Story:
 
-As a user, I want to be able to view edit or delete a post
+As a user, I want to be able to view, edit or delete a post
 
-As a user, I want to able to create a post and list posts
+As a user, I want to be able to create a post and list posts
 
 Implementation:
 
@@ -188,10 +180,9 @@ Methods:
 * DELETE - Used to delete a post
 
 
-
 User Story:
 
- I want user to be able to get profile posts
+As a user, I will be able to get profile posts
 
 Implementation:
 
@@ -322,7 +313,7 @@ Installed as package dependcies with above installations:
 
 ## Testing
 
-The following tests were carried out on the app:
+The following tests were carried out :
 
 ### Manual testing of user stories
 
@@ -339,7 +330,7 @@ Animals | Create & delete | An animal can be created,just by uploading images or
 Animals/Countries | Create & delete | From the data lists of countries, a country can be added (created) or remove (deleted) | Works as expected
 
 <details><summary>Screenshots - USER</summary>
-    <details><summary>Create user</summary>
+    <details><summary>User | Create, update & delete user | A user can be created, edited or deleted | Works as expected</summary>
     <img src="docs/testing/manual/user-created.PNG">
     <br>
     <img src="docs/testing/manual/user-add.PNG">
@@ -350,7 +341,7 @@ Animals/Countries | Create & delete | From the data lists of countries, a countr
 </details>
 
 <details><summary>Screenshots - PROFILE</summary>
-    <details><summary>Update profile</summary>
+    <details><summary>Profile | Create, update & delete | User profile can be created, edited or deleted | Works as expected</summary>
     <img src="docs/testing/manual/profiles.PNG">
     <br>
     <img src="docs/testing/manual/profile-update.PNG">
@@ -370,7 +361,7 @@ Animals/Countries | Create & delete | From the data lists of countries, a countr
 
 
 <details><summary>Screenshots - COMMENT</summary>
-    <details><summary>Create comment</summary>
+    <details><summary>Create, update & delete | A comment can be created, edited or deleted | Works as expected</summary>
     <img src="docs/testing/manual/comment-create2.PNG">
     <br>
     <img src="docs/testing/manual/comment-create3.PNG">
@@ -390,13 +381,13 @@ Animals/Countries | Create & delete | From the data lists of countries, a countr
 </details>
 
 <details><summary>Screenshots - CONTACT</summary>
-    <details><summary>Create - Contact message</summary>
+    <details><summary>Create & delete | A Contact message can be created or deleted | Works as expected</summary>
     <img src="docs/testing/manual/contactform-create1.PNG">
     <br>
     <img src="docs/testing/manual/contactform8.PNG">
     <br>
     </details>
-    <details><summary>Delete - Contact message (superuser only)</summary>
+    <details><summary>Delete - Contact message (admin on this one)</summary>
     <img src="docs/testing/manual/contact-delete3.PNG">
     <br>
     <img src="docs/testing/manual/contact-delete-notification.PNG">
@@ -407,7 +398,7 @@ Animals/Countries | Create & delete | From the data lists of countries, a countr
 </details>
 
 <details><summary>Screenshots - ANIMAL</summary>
-    <details><summary>Create Animal</summary>
+    <details><summary>Create & delete | From the data lists of countries, a country can be added (created) or removed (deleted) | Works as expected</summary>
     <img src="docs/testing/manual/addanima1.PNG">
     <br>
     <img src="docs/testing/manual/addanimal.PNG">
@@ -437,7 +428,7 @@ Automated testing was done using the Django Rest Framework APITestCase.
 
 - Tests 
 
-<details><summary>Reports Testing</summary>
+<details><summary>Reports Testing on Comments,Contact,Profile and Animals | Works as expected</summary>
 <img src="docs/testing/automated/onecommenttest.PNG">
 <img src="docs/testing/automated/contactest.PNG">
 <img src="docs/testing/automated/profiletest.PNG">
@@ -445,7 +436,7 @@ Automated testing was done using the Django Rest Framework APITestCase.
 <img src="docs/testing/automated/testrun1.PNG">
 </details>
 
-<details><summary>Combined Report</summary>
+<details><summary>All test Report | Works as expected </summary>
 <img src="docs/testing/automated/alltest.PNG">
 </details>
 
