@@ -70,12 +70,14 @@ DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
-
     '8000-email2ify-drffriends-piiegiryrr7.ws-eu102.gitpod.io',
-    "localhost",
+    "localhost"
 
 ]
 
+CORS_ALLOWED = [
+    "https://3000-email2ify-friends-e91o0vlncxw.ws-eu102.gitpod.io/specie/",
+]
 
 if 'CLIENT_ORIGIN' in os.environ:
     CORS_ALLOWED_ORIGINS = [
@@ -94,7 +96,7 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
 
 
 CORS_ALLOW_CREDENTIALS = True
-
+CORS_ORIGIN_ALLOW_ALL = True
 
 
 # Application definition
@@ -127,7 +129,7 @@ INSTALLED_APPS = [
     'comments',
     'likes',
     'animals',
-    
+
 
 
 ]
