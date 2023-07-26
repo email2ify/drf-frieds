@@ -66,16 +66,13 @@ REST_AUTH_SERIALIZERS = {
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEBUG' in os.environ
+DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
 
-
-    'friends12.herokuapp.com',
-
     '8000-email2ify-drffriends-piiegiryrr7.ws-eu102.gitpod.io',
-    "localhost"
+    "localhost",
 
 ]
 
@@ -97,7 +94,7 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
 
 
 CORS_ALLOW_CREDENTIALS = True
-CORS_ORIGIN_ALLOW_ALL = True
+
 
 
 # Application definition
