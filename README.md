@@ -439,7 +439,7 @@ To verify if contact form can be posted without filling in any fieldsbr>
 </details>
 
 <details><summary>Reports Testing on Profile | Works as expected</summary>
-Test to view existing user profile <br>
+
 Test to view profile which that does not exist <br>
 Test user can update their profile when not logged in <br>
 Test user that can update a profile they own <br>
