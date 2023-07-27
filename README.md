@@ -432,7 +432,7 @@ Automated testing was done using the Django Rest Framework APITestCase.
 
 Test to ensure non auth user can send a contact form <br>
 Test if user can send a contact form <br>
-To verify if contact form can be posted without filling in any fieldsbr>
+To verify if contact form can be posted without filling in any fields<br>
 <img src="docs/testing/automated/contactest.PNG">
 </details>
 
