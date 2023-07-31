@@ -219,16 +219,16 @@ to minimum permissions granted.
 
 ## Libraries & Tools
 
-- [Cloudinary](https://cloudinary.com/) - File storage. Justification: I used this to store static files
+- [Cloudinary](https://cloudinary.com/) - File storage.I used this to store static files
 - [Dbeavers](https://dbeaver.io/) - I used this for the database entity relationship diagram
-- [Git](https://git-scm.com/) - Version control system. Justification: I used this for version control and to push the code to GitHub
-- [GitHub](https://github.com/) - Cloud based hosting service. Justification: I used this as a remote repository to store project code
-- [Gitpod](https://gitpod.io/workspaces) - Cloud development environment. Justification: I used this to host a virtual workspace
-- [Heroku](https://heroku.com) - Cloud platform. Justification: I used this was used to deploy the project into live environment
-- [Django REST Framework](https://www.django-rest-framework.org/) - API toolkit. Justification: I used this to build the back-end API
-- [Django AllAuth](https://django-allauth.readthedocs.io/en/latest/index.html) - API Module. Justification: I used this for user authentication
-- [Psycopg2](https://www.psycopg.org/docs/) - PostgreSQL database adaptor. Justification: This was used as a PostgreSQL database adapter for Python
-- [ElephantSQL](https://www.elephantsql.com/) - Database hosting service – Justification: This was used as the deployed project on Heroku uses an ElephantSQL database
+- [Git](https://git-scm.com/) - Version control system.I used this for version control and to push the code to GitHub
+- [GitHub](https://github.com/) - Cloud based hosting service.I used this as a remote repository to store project code
+- [Gitpod](https://gitpod.io/workspaces) - Cloud development environment.I used this to host a virtual workspace
+- [Heroku](https://heroku.com) - Cloud platform.I used this was used to deploy the project into live environment
+- [Django REST Framework](https://www.django-rest-framework.org/) - API toolkit.I used this to build the back-end API
+- [Django AllAuth](https://django-allauth.readthedocs.io/en/latest/index.html) - API Module.I used this for user authentication
+- [Psycopg2](https://www.psycopg.org/docs/) - PostgreSQL database adaptor.This was used as a PostgreSQL database adapter for Python
+- [ElephantSQL](https://www.elephantsql.com/) - Database hosting service. This was used as the deployed project on Heroku uses an ElephantSQL database
 
 ##### Back to [top](#table-of-contents)
 
