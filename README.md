@@ -63,9 +63,9 @@ This aspect covers all the initial setup of the Django application and Django RE
 **Comments**
 
 This aspect covers all API endpoint creation and database connections relating to the CRUD functionality of user comments in relation to posts.
-* The Comment model contains the following fields: owner, task, created_on, updated_on and comment_body
-* ForeignKey relation between the ownner and User id field
-* ForeignKey relation between the task and Task id field
+* The Comment model contains the following fields: owner, post, created_on, updated_on and comment_body
+* ForeignKey relation between the owner and User id field
+* ForeignKey relation between the Post and Post id field
 
 **Profiles**
 
@@ -100,7 +100,7 @@ My user story:
 
 **Setup**
 
-* Create the google cloud and create the connection to the project so that static images can be uploaded by users.
+* Create a Cloudinary cloud storage and the connection to the project so that static images can be uploaded by users.
 
 * Create a new account so that I can access all the features for signed up users
 
@@ -113,12 +113,12 @@ My user story:
 **Profiles**
 
 * I needed to create a new blank profile with default image when a user is created.
-* I needed to be able to see profiles post 
+* I needed to be able to see profiles posts when user posted
 
 **Contact**
 
 * For user, I can be able to fill out an enquiries form 
-* For user, I can be able to reach out through the contact if any complaint arises or deleting of account
+* For user, I can be able to reach out through the contact form if any complaint arises or deleting of an account
 
 **Animal**
 
@@ -220,7 +220,7 @@ to minimum permissions granted.
 ## Libraries & Tools
 
 - [Cloudinary](https://cloudinary.com/) - File storage. Justification: I used this to store static files
-- [Graphviz](https://dreampuf.github.io/GraphvizOnline/) - Image generator. Justification: I used this used for the database model diagram
+- [Dbeavers](https://dbeaver.io/) - I used this for the database entity relationship diagram
 - [Git](https://git-scm.com/) - Version control system. Justification: I used this for version control and to push the code to GitHub
 - [GitHub](https://github.com/) - Cloud based hosting service. Justification: I used this as a remote repository to store project code
 - [Gitpod](https://gitpod.io/workspaces) - Cloud development environment. Justification: I used this to host a virtual workspace
@@ -243,7 +243,7 @@ All folders were run through flake8. Several issues appeared with various reason
 
 **Bugs and their fixes**
  
- 500 error as a bug occurred on post and profile form submissions, which was later removed the dublicate causing the errors
+ 500 error as a bug occurred on post and profile form submissions, due to dublicates causing the errors which was later removed.
 
 
 ## Python Packages
@@ -317,7 +317,7 @@ The following tests were carried out :
 
 ### Manual testing of user stories
 
-- As an admin, I want to be able to create, edit and delete the users, posts, comments and likes, remove country or add animal so that I can have a control over the content of the application.
+- As an admin, I want to be able to create, edit and delete users, posts, comments and likes, remove country or add animal so that I can have control over the content of the application.
 
 **Test** | **Action** | **Expected Result** | **Actual Result**
 -------- | ------------------- | ------------------- | -----------------
