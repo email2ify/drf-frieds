@@ -129,7 +129,7 @@ My user story:
 
 User Story:
 
-* User can create a project set up so that I can build the project features.
+* As a user I can create a project set up so that I can build the project features.
 
 Implementation:
 The settings were updated to hide secret variables and set dev and production environments.
@@ -142,7 +142,7 @@ Implementation: Django rest framework and dj_rest_auth were installed and added 
 
 User Story:
 
-* Create api views, so that they are available to the front end
+* Creating an api views, so that they are available to the front end
 
 Implementation
 
@@ -200,8 +200,7 @@ Methods:
 
 ## Security
 
-A permissions class was added called "IsOwnerOrReadOnly" to ensure only users who create the content are able to edit or delete it and the GCP IAMS permissions for service account.
-to minimum permissions granted.
+A permissions class was added called "IsOwnerOrReadOnly" to ensure only users who create the content are able to edit or delete it.
 
 ## Technologies Used
 
@@ -243,7 +242,7 @@ All folders were run through flake8. Several issues appeared with various reason
 
 **Bugs and their fixes**
  
- 500 error as a bug occurred on post and profile form submissions, due to dublicates causing the errors which was later removed.
+ 500 error code occurred on post and profile form submissions, due to dublicates causing the errors which was later removed or solved.
 
 
 ## Python Packages
