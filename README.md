@@ -538,7 +538,7 @@ Most commonly, forks are used to either propose changes to someone else's projec
 
 ## Credits
 
-Code Institute on Walkthrough project ['Moments'](https://github.com/Code-Institute-Solutions/drf-api).
+Code Institute on Walkthrough project ['Drf-Api'](https://github.com/Code-Institute-Solutions/drf-api) and ['Moments'](https://github.com/Code-Institute-Solutions/moments)
 
 ## Acknowledgements
 
