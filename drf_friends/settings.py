@@ -71,7 +71,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
-    '8000-email2ify-drffriends-piiegiryrr7.ws-eu102.gitpod.io',
+    'friends12.herokuapp.com',
     "localhost"
 
 ]
